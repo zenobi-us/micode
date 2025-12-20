@@ -11,8 +11,11 @@ Start by understanding the current project context, then ask questions one at a 
 
 ## The Process
 
+**Gather context first (optional but recommended):**
+- Spawn **codebase-locator** agent: "Find files related to [topic from user's idea]"
+- Use the file list to inform your questions and understand what already exists
+
 **Understanding the idea:**
-- Check out the current project state first (files, docs, recent commits)
 - Ask questions one at a time to refine the idea
 - Prefer multiple choice questions when possible, but open-ended is fine too
 - Only one question per message - if a topic needs more exploration, break it into multiple questions

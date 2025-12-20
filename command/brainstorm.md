@@ -6,8 +6,8 @@ Use the **brainstormer** agent to turn the user's idea into a fully-formed desig
 
 ## Process
 
-1. Check project context (files, docs, recent commits if available)
-2. Ask questions ONE AT A TIME (prefer multiple choice)
+1. Spawn **codebase-locator** agent to find relevant files for context
+2. Ask questions ONE AT A TIME (prefer multiple choice), informed by context
 3. Propose 2-3 approaches with trade-offs, lead with your recommendation
 4. Present design in 200-300 word sections, validate each section
 5. Write final design to `thoughts/shared/designs/YYYY-MM-DD-<topic>-design.md`
