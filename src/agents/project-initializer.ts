@@ -93,26 +93,50 @@ const PROMPT = `
     </markers>
   </language-detection>
 
-  <architecture-output>
-    <section name="Overview">1-2 sentences on what the project does</section>
-    <section name="Tech Stack">Languages, frameworks, key dependencies</section>
-    <section name="Directory Structure">Annotated tree of important directories</section>
-    <section name="Core Components">Main modules and their responsibilities</section>
-    <section name="Data Flow">How requests/data move through the system</section>
-    <section name="External Integrations">APIs, databases, services</section>
-    <section name="Configuration">Config files and environment variables</section>
-    <section name="Build & Deploy">How to build, test, deploy</section>
-  </architecture-output>
+  <architecture-analysis>
+    <questions-to-answer>
+      <question>What does this project do? (purpose)</question>
+      <question>What are the main entry points?</question>
+      <question>How is the code organized? (modules, packages, layers)</question>
+      <question>What are the core abstractions?</question>
+      <question>How does data flow through the system?</question>
+      <question>What external services does it integrate with?</question>
+      <question>How is configuration managed?</question>
+      <question>What's the deployment model?</question>
+    </questions-to-answer>
+    <output-sections>
+      <section name="Overview">1-2 sentences on what the project does</section>
+      <section name="Tech Stack">Languages, frameworks, key dependencies</section>
+      <section name="Directory Structure">Annotated tree of important directories</section>
+      <section name="Core Components">Main modules and their responsibilities</section>
+      <section name="Data Flow">How requests/data move through the system</section>
+      <section name="External Integrations">APIs, databases, services</section>
+      <section name="Configuration">Config files and environment variables</section>
+      <section name="Build & Deploy">How to build, test, deploy</section>
+    </output-sections>
+  </architecture-analysis>
 
-  <code-style-output>
-    <section name="Naming Conventions">Files, functions, classes, variables, constants</section>
-    <section name="File Organization">What goes where, file structure patterns</section>
-    <section name="Import Style">How imports are organized and grouped</section>
-    <section name="Code Patterns">Common patterns used (with examples)</section>
-    <section name="Error Handling">How errors are created, thrown, caught</section>
-    <section name="Testing">Test file naming, structure, patterns</section>
-    <section name="Do's and Don'ts">Quick reference list</section>
-  </code-style-output>
+  <code-style-analysis>
+    <questions-to-answer>
+      <question>How are files and directories named?</question>
+      <question>How are functions, classes, variables named?</question>
+      <question>What patterns are used consistently?</question>
+      <question>How are errors handled?</question>
+      <question>How is logging done?</question>
+      <question>What testing patterns are used?</question>
+      <question>Are there linter/formatter configs to reference?</question>
+    </questions-to-answer>
+    <output-sections>
+      <section name="Naming Conventions">Files, functions, classes, variables, constants</section>
+      <section name="File Organization">What goes where, file structure patterns</section>
+      <section name="Import Style">How imports are organized and grouped</section>
+      <section name="Code Patterns">Common patterns used (with examples)</section>
+      <section name="Error Handling">How errors are created, thrown, caught</section>
+      <section name="Logging">Logging conventions and levels</section>
+      <section name="Testing">Test file naming, structure, patterns</section>
+      <section name="Do's and Don'ts">Quick reference list</section>
+    </output-sections>
+  </code-style-analysis>
 
   <rules>
     <category name="Speed">
