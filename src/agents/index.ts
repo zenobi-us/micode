@@ -9,6 +9,7 @@ import { handoffCreatorAgent } from "./handoff-creator";
 import { handoffResumerAgent } from "./handoff-resumer";
 import { primaryAgent, PRIMARY_AGENT_NAME } from "./commander";
 import { projectInitializerAgent } from "./project-initializer";
+import { researcherAgent } from "./researcher";
 
 export const agents: Record<string, AgentConfig> = {
   [PRIMARY_AGENT_NAME]: primaryAgent,
@@ -21,6 +22,7 @@ export const agents: Record<string, AgentConfig> = {
   "handoff-creator": handoffCreatorAgent,
   "handoff-resumer": handoffResumerAgent,
   "project-initializer": projectInitializerAgent,
+  researcher: researcherAgent,
 };
 
 export {
@@ -35,4 +37,5 @@ export {
   handoffCreatorAgent,
   handoffResumerAgent,
   projectInitializerAgent,
+  researcherAgent,
 };
