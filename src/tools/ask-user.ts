@@ -18,11 +18,14 @@ export function createAskUserTool() {
     execute: async (args) => {
       const { question, options, context } = args;
 
-      if (!options || options.length < 2) {
-        throw new Error("ask_user FAILED: You must provide 'options' array with 2-6 choices. Example: options: [\"Design\", \"Debug\", \"Implement\"]");
-      }
-
       let output = "---\n## Question for you\n\n";
+
+      if (!options || options.length < 2) {
+        output += "⚠️ **ERROR: Agent called ask_user without options!**\n\n";
+        output += "The agent should have provided multiple-choice options.\n";
+        output += "Please tell the agent to retry with options.\n\n---";
+        return output;
+      }
 
       if (context) {
         output += `> ${context}\n\n`;
