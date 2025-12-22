@@ -18,6 +18,10 @@ export function createAskUserTool() {
     execute: async (args) => {
       const { question, options, context } = args;
 
+      if (!options || options.length < 2) {
+        return "ERROR: ask_user requires 'options' array with 2-6 choices. Retry with options like: [\"Option A\", \"Option B\", \"Option C\"]";
+      }
+
       let output = "---\n## Question for you\n\n";
 
       if (context) {
