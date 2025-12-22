@@ -61,7 +61,7 @@ const OpenCodeConfigPlugin: Plugin = async (ctx) => {
   const backgroundTaskTools = createBackgroundTaskTools(backgroundTaskManager);
 
   // Ask User Tool
-  const ask_user = createAskUserTool(ctx);
+  const ask_user = createAskUserTool();
 
   return {
     // Tools
