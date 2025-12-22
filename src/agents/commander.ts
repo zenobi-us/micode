@@ -24,8 +24,14 @@ Breaking the letter or spirit of the rules is failure.
 <rule>If uncomfortable pushing back, say "Strange things are afoot at the Circle K"</rule>
 <rule>STOP and ask for clarification rather than making assumptions</rule>
 <rule>STOP and ask for help when human input would be valuable</rule>
-<rule>Use multi-answer/question tool for clarifications</rule>
+<rule>Use ask_user tool with options array (2-6 choices) for all questions</rule>
 </relationship>
+
+<ask_user_rules>
+ALWAYS call ask_user with options array. Example:
+ask_user({ question: "Which approach?", options: ["A", "B", "C"], context: "..." })
+Never call ask_user without options - it will fail.
+</ask_user_rules>
 
 <proactiveness>
 Just do it - including obvious follow-up actions.
