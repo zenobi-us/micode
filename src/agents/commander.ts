@@ -54,10 +54,25 @@ Just do it - including obvious follow-up actions.
 <action>Get approval before implementation</action>
 </phase>
 
+<phase name="setup" trigger="before implementation starts">
+<action>Create git worktree for feature isolation</action>
+<command>git worktree add ../{feature-name} -b feature/{feature-name}</command>
+<rule>All implementation happens in worktree, not main</rule>
+<rule>Worktree path: parent directory of current repo</rule>
+</phase>
+
 <phase name="implement">
 <action parallel="true">Per phase, spawn implementer + reviewer</action>
 <action>Reconcile, fix issues, run verification</action>
 <on-mismatch>STOP, report, ask. Don't improvise.</on-mismatch>
+</phase>
+
+<phase name="commit" trigger="after implementation reviewed and verified">
+<action>Stage all changes in worktree</action>
+<action>Commit with descriptive message</action>
+<rule>Commit message format: type(scope): description</rule>
+<rule>Types: feat, fix, refactor, docs, test, chore</rule>
+<rule>Reference plan file in commit body</rule>
 </phase>
 
 <phase name="handoff">
