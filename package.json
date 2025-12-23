@@ -1,11 +1,14 @@
 {
   "name": "micode",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "OpenCode plugin with Brainstorm-Research-Plan-Implement workflow",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
-  "files": ["dist", "INSTALL_CLAUDE.md"],
+  "files": [
+    "dist",
+    "INSTALL_CLAUDE.md"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -18,7 +21,13 @@
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "bun run clean && bun run build"
   },
-  "keywords": ["opencode", "plugin", "research", "plan", "implement"],
+  "keywords": [
+    "opencode",
+    "plugin",
+    "research",
+    "plan",
+    "implement"
+  ],
   "author": "vtemian",
   "license": "MIT",
   "repository": {
